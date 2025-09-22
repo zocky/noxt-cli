@@ -45,6 +45,7 @@ export async function execute([recipe], options) {
     config[key] = options[key] ?? config[key];
   }
 
+
   startServer({ config, recipe }).catch(err => {
     console.error(`[noxt-server] Error starting server: ${err.message}`);
     console.log(`[noxt-server]`, err.stack);
