@@ -2,7 +2,7 @@ export const route = '/';
 
 export default function PageIndex({ }, { 
   // all components are available here
-  Json, Sidebar,
+  PageTasks, Sidebar,
   // so are request and response objects
   req, res, params,
   // utils are extendable by your units in ../../units
@@ -10,10 +10,10 @@ export default function PageIndex({ }, {
   // use slot(name,value) and slot(name,key,value) to pass values to the layout
   slot,
 }) {
-  slot('title', 'Welcome to Noxt');
+  slot('title', 'main', 'Welcome to Noxt');
   
   return (
-    <article>
+    <>
       <main>
         <h2>{utils.greet('user')}</h2>
           Here are some tasks: <PageTasks.Link text="Tasks" />
@@ -21,6 +21,6 @@ export default function PageIndex({ }, {
       <aside>
         <Sidebar />
       </aside>
-    </article>
+    </>
   );
 }

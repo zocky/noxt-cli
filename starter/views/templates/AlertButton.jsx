@@ -4,10 +4,13 @@ const jsAlert = `
   }
 `;
 
-export default function AlertButton({ label, message }) {
+export default function AlertButton({ label, message },{ slot }) {
+
+  slot('js', 'alert-button', jsAlert);
+
   return (
-    <Button onclick="doAlert(this)" data-message={message}>
+    <button onclick="doAlert(this)" data-message={message}>
       {label}
-    </Button>
+    </button>
   );
 }

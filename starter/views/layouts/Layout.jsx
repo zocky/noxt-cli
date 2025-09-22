@@ -4,7 +4,7 @@ export default function Layout({ body }, { slot, Header }) {
   const styles = slot('style').map(makeStyleTag).join('\n');
   const inlineJS = slot('js').map(c => `<script>${c}</script>`).join('\n');
   const inlineCSS = slot('css').map(c => `<style>${c}</style>`).join('\n');
-  const title=slot('title').join (' | ');
+  const title = slot('title').join(' | ');
 
   return (<>
     {{ html: `<!DOCTYPE html>` }}
@@ -23,10 +23,10 @@ export default function Layout({ body }, { slot, Header }) {
         {{ html: inlineCSS }}
       </head>
       <body>
-        <Header title={title}/>
-        <div class="skin layout">
+        <article>
+          <Header title={title} />
           {{ html: body }}
-        </div>
+        </article>
         {{ html: inlineJS }}
       </body>
     </html>

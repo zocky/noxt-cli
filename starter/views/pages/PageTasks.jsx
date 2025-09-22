@@ -11,12 +11,12 @@ export default function PageTasks({ tasks }, {
   req, res, params,
   // utils are extendable by your units in ../../units
   utils,
-  // use slot(name,value) and slot(name,key,value) to pass values to the layout
+  // use slot(name,key,value) to pass values to the layout
   slot,
 }) {
-  slot('title', 'Welcome to Noxt');
+  slot('title', 'main', 'Tasks');
   return (
-    <article>
+    <>
       <main>
         <h2>Here are some tasks</h2>
         <table>
@@ -31,7 +31,7 @@ export default function PageTasks({ tasks }, {
             {tasks.map(({ id, title, completed }) => (
               <tr key={id}>
                 <td>{id}</td>
-                <td><PageTasks.Link taskid={id} text={title} /></td>
+                <td><PageTask.Link taskid={id} text={title} /></td>
                 <td>{completed ? 'Yes' : 'No'}</td>
               </tr>
             ))}
@@ -43,6 +43,6 @@ export default function PageTasks({ tasks }, {
       <aside>
         <Sidebar />
       </aside>
-    </article>
+    </>
   );
 }
