@@ -1,6 +1,6 @@
 export const route = '/';
 
-export default function PageIndex({ }, { utils } {
+export default function PageIndex({ }, { 
   // all components are available here
   Json, Sidebar,
   // so are request and response objects
