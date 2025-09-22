@@ -1,11 +1,10 @@
 {
   "name": "noxt-cli",
   "version": "0.1.6",
-  "description": "CLI for noxt-server",
+  "description": "CLI starter for noxt-server",
   "type": "module",
-  "main": "noxt-server.js",
   "bin": {
-    "noxt-server": "./bin/noxt-server"
+    "noxt-cli": "./bin/noxt-cli"
   },
   "repository": "https://github.com/zocky/noxt-cli",
   "scripts": {
@@ -23,13 +22,8 @@
   "author": "Zoran Obradović [https://github.com/zocky]",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "express": "^5.0.0",
-    "cookie-parser": "^1.4.6",
     "js-yaml": "^4.1.0",
-    "noxt-js-middleware": "^1.0.5",
     "minimist": "^1.2.8",
-    "mlm-core": "^1.0.5",
-    "node-fetch-cache": "^5.0.2",
     "noxt-server": "^0.1.6"
   },
   "devDependencies": {

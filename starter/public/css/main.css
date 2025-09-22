@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+article {
+  max-width:1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 1fr max(25%, 200px);
+  grid-template-areas: "header header" "main aside";
+  gap: 20px;
+
+  main {
+    grid-area:main
+  }
+
+  header {
+    grid-area:header
+  }
+
+  aside {
+    grid-area:aside
+  }
+}
+
+

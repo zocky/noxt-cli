@@ -1,0 +1,9 @@
+recipe: app/main
+port: 3000
+ssl: false
+host: localhost
+logLevel: info
+views: 
+  - views
+static: 
+  public
