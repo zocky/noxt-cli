@@ -18,7 +18,7 @@ const { _: args, ...options } = minimist(process.argv.slice(2), {
 const cmd = args.shift() ?? 'start';
 
 if (cmd in commands) {
-  commands[cmd].execute(args, options);
+  await commands[cmd].execute(args, options);
 } else {
   console.log(`Usage: noxt-cli <${Object.keys(commands).join('|')}> [options]`);
   process.exit(1);

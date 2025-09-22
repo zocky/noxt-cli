@@ -1,6 +1,6 @@
 export const route = '/';
 
-export default function PageIndex({ tasks }, {
+export default function PageIndex({ }, { utils } {
   // all components are available here
   Json, Sidebar,
   // so are request and response objects
@@ -11,11 +11,12 @@ export default function PageIndex({ tasks }, {
   slot,
 }) {
   slot('title', 'Welcome to Noxt');
+  
   return (
     <article>
       <main>
-        <h2>Here are some tasks</h2>
-          <PageTasks.Link text="Tasks" />
+        <h2>{utils.greet('user')}</h2>
+          Here are some tasks: <PageTasks.Link text="Tasks" />
       </main>
       <aside>
         <Sidebar />
