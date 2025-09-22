@@ -7,6 +7,15 @@ import { startServer } from 'noxt-server';
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
+function die(msg) {
+  console.error(msg);
+  process.exit(1);
+}
+
+function warn(msg) {
+  console.warn(msg);
+}
+
 export async function execute([recipe], options) {
   // read deafault config
   let config = yaml.load(fs.readFileSync(path.resolve(__dirname, '../default.config.yaml'), 'utf8'));
@@ -31,7 +40,7 @@ export async function execute([recipe], options) {
   // override config with command line options
   for (const key in options) {
     if (!(key in config)) {
-      warn(`Unknown config option: ${key}`);
+      //warn(`Unknown config option: ${key}`);
     }
     config[key] = options[key] ?? config[key];
   }
