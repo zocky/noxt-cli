@@ -1,6 +1,6 @@
 {
   "name": "noxt-cli",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "CLI starter for noxt-server",
   "type": "module",
   "bin": {
@@ -24,7 +24,7 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "minimist": "^1.2.8",
-    "noxt-server": "^0.1.13"
+    "noxt-server": "^0.1.14"
   },
   "devDependencies": {
     "noxt-server": "../noxt-server"
